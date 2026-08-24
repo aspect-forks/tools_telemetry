@@ -6,6 +6,12 @@
 
 Aspect's ruleset telemetry Bazel module.
 
+> [!TIP]
+> For the full story — what is collected and why, how the data is protected, and
+> every way to opt out — see [our blog post](https://aspect.build/blog/bazel-ecosystem-usage-stats).
+> The public statistics built from this data live at
+> [aspect.build/open-source/stats](https://aspect.build/open-source/stats).
+
 This package defines a Bazel extension which allows for rulesets to report usage to Aspect, allowing us to estimate the install base of Bazel, rulesets, and monitor trends in the ecosystem such as library usage and Bazel versions.
 
 ## When reporting occurs
