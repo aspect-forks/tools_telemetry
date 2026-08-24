@@ -25,18 +25,24 @@ TELEMETRY_ENV_VAR = "ASPECT_TOOLS_TELEMETRY"
 TELEMETRY_DEST_VAR = "ASPECT_TOOLS_TELEMETRY_ENDPOINT"
 TELEMETRY_DEST = "https://telemetry.aspect.build/ingest?source=tools_telemetry"
 
-_NOTICE_VERSION = 2  # Increment on text changes or data collection changes
+_NOTICE_VERSION = 3  # Increment on text changes or data collection changes
 
 _NOTICE = """\
 Aspect Telemetry will begin collecting ruleset usage data (which Bazel and module versions are in use) on the next invocation, to help us maintain our open source rulesets. Reports carry no user or organization identifiers and are governed by the https://aspect.build/privacy-policy.
 
-See https://github.com/aspect-build/tools_telemetry for the exact fields and opt-out instructions.
+To opt out, add this line to your .bazelrc:
+  common --repo_env=DO_NOT_TRACK=1
+
+See https://github.com/aspect-build/tools_telemetry for the exact fields and finer-grained controls.
 """
 
 _NOTICE_UPLOADING = """\
 Aspect Telemetry is uploading ruleset usage data (which Bazel and module versions are in use) now and on future builds, to help us maintain our open source rulesets. Reports carry no user or organization identifiers and are governed by the https://aspect.build/privacy-policy.
 
-See https://github.com/aspect-build/tools_telemetry for the exact fields and opt-out instructions.
+To opt out, add this line to your .bazelrc:
+  common --repo_env=DO_NOT_TRACK=1
+
+See https://github.com/aspect-build/tools_telemetry for the exact fields and finer-grained controls.
 """
 
 
